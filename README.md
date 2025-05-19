@@ -1,8 +1,13 @@
 # Spring Study
 - Filter
-	- extends Filter (jakarta.Filter)
 	- @WebFilter("/") param : path
-	- SpringBootApplication.java -> @ServletComponentScan 등록 -> 그래야 필터 사용 가능
+		- extends Filter (jakarta.Filter)	
+		- SpringBootApplication.java -> @ServletComponentScan 등록 -> 그래야 필터 사용 가능
+		
+	- @Configuration : WebFilter 어노테이션 사용 안할 시
+		- FilterRegistrationBean<Filter> 빈 등록
+		- bean.setFilter()				: 커스텀 필터 등록
+		- bean.addUrlPatterns("/")	: path 설정
 
 ---
 
